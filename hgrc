@@ -1,0 +1,43 @@
+[ui]
+username = Stephan <stephan@stzal.com>
+ignore   = ~/.hgignore
+verbose  = True
+
+[extensions]
+bookmarks  =
+churn      =
+color      =
+convert    =
+hgext.crecord    = ~/.hg/hgext/crecord/crecord
+fetch      =
+graphlog   =
+histedit   = ~/.hg/hgext/histedit/hg_histedit.py
+hgshelve   = ~/.hg/hgext/hgshelve/hgshelve.py
+hgcollapse = ~/.hg/hgext/hgcollapse/hgext/collapse.py
+mq         =
+pager      =
+patchbomb  =
+purge      =
+rebase     =
+record     =
+transplant =
+zeroconf   =
+
+[extdiff]
+cmd.interdiff = hg-interdiff
+cmd.opendiff  = opendiff-w
+
+[merge-tools]
+filemerge.executable = opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output
+
+[bookmarks]
+track.current = True
+
+[pager]
+pager = LESS='FSRX' less
+
+[alias]
+__mystatus = status
+st = !hg __mystatus $(hg root)
+

@@ -1,0 +1,6 @@
+pkg
+.DS_Store
+.*.swp
+.swp
+*.pyc
+*.swo

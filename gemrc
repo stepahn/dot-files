@@ -4,4 +4,4 @@
 :verbose: true
 :backtrace: false
 :benchmark: false
-em: --no-ri --no-rdoc
+gem: --no-ri --no-rdoc

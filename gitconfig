@@ -37,5 +37,8 @@
 [push]
   # Push current branch even if you've never pushed it before
   default = tracking
+[rebase]
+  autosquash = true
+  autoStash = true
 [include]
   path = ~/.gitconfig.private

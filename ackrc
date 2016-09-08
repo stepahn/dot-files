@@ -1,2 +1,6 @@
---type-add=haml=.haml,.sass,.scss
---type-add=js=.coffee
+--type-add
+html=.haml
+--type-add
+css=.sass,.scss
+--type-add
+js=.coffee

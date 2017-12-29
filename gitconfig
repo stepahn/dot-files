@@ -21,14 +21,14 @@
   untracked = cyan
 [core]
   whitespace=trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore/gitignore.global
 [branch]
   autosetupmerge = true
 [diff]
   # For Github-style word diffs
   wordRegex = [^[:space:]]
 [alias]
-  fixup = "!sh -c 'EDITOR=cat COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
+  fixup = "!sh -c 'export GIT_EDITOR=true COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
   co = checkout
   glog = log --graph
   tree = log --oneline --decorate --graph
@@ -37,8 +37,14 @@
 [push]
   # Push current branch even if you've never pushed it before
   default = tracking
+	followTags = true
 [rebase]
   autosquash = true
   autoStash = true
 [include]
   path = ~/.gitconfig.private
+[user]
+	name = Stephan Zalewski
+	email = stephan@foo-labs.com
+[log]
+	abbrevCommit = true

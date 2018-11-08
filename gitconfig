@@ -34,9 +34,14 @@
   tree = log --oneline --decorate --graph
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   wdiff = diff --color-words
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = "!git ls-files -v | grep ^[a-z]"
+  unmerged = !git branch -r --no-merged | grep -v HEAD | xargs -L1 git --no-pager log --pretty=tformat:'%Cgreen%d%Creset - %h by %an (%Cblue%ar%Creset)' -1
+  merged = !git branch -r --merged | grep -v HEAD | xargs -L1 git --no-pager log --pretty=tformat:'%Cgreen%d%Creset - %h by %an (%Cblue%ar%Creset)' -1
 [push]
   # Push current branch even if you've never pushed it before
-  default = tracking
+	default = simple
 	followTags = true
 [rebase]
   autosquash = true
@@ -48,3 +53,8 @@
 	email = stephan@foo-labs.com
 [log]
 	abbrevCommit = true
+[rerere]
+	enabled = 1
+	autoupdate = true
+[gc]
+	rerereResolved = never

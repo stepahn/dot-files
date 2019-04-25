@@ -20,13 +20,10 @@
   changed = green # deleted items NOT done with "git rm" are this color too
   untracked = cyan
 [core]
-  whitespace=trailing-space,cr-at-eol
+  whitespace = trailing-space, cr-at-eol, space-before-tab
   excludesfile = ~/.gitignore/gitignore.global
 [branch]
   autosetupmerge = true
-[diff]
-  # For Github-style word diffs
-  wordRegex = [^[:space:]]
 [alias]
   fixup = "!sh -c 'export GIT_EDITOR=true COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
   co = checkout

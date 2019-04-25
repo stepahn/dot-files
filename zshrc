@@ -53,7 +53,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize colored-man-pages docker docker-compose tmux vi-mode git-flow-completion)
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f $ZSH/oh-my-zsh.local.sh ]] && source $ZSH/oh-my-zsh.local.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,3 +130,5 @@ setopt HIST_NO_STORE
 
 [[ -d /usr/local/bin ]] && PATH=/usr/local/bin:$PATH
 [[ -d /usr/local/sbin ]] && PATH=/usr/local/sbin:$PATH
+
+[[ -f ${HOME}/.zshrc.local ]] && source ${HOME}/.zshrc.local

@@ -111,7 +111,10 @@ export COCOAPODS_DISABLE_STATS=1
 export GIT_MERGE_AUTOEDIT=no
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
-export DEFAULT_USER=$USER
+
+if [[ -n ${SSH_CLIENT} ]]; then
+  PROMPT="%n@%m ${PROMPT}"
+fi
 
 export KEYTIMEOUT=1
 

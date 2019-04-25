@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize colored-man-pages docker docker-compose tmux vi-mode git-flow-completion)
+plugins=(git colorize colored-man-pages tmux vi-mode)
 
 [[ -f $ZSH/oh-my-zsh.local.sh ]] && source $ZSH/oh-my-zsh.local.sh
 

@@ -25,7 +25,7 @@
 [branch]
   autosetupmerge = true
 [alias]
-  fixup = "!sh -c 'export GIT_EDITOR=true COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash $COMMIT~1' -"
+  fixup = "!sh -c 'export GIT_EDITOR=true COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autostash --autosquash --rebase-merges $COMMIT~1' -"
   co = checkout
   glog = log --graph
   tree = log --oneline --decorate --graph

@@ -45,9 +45,6 @@
   autoStash = true
 [include]
   path = ~/.gitconfig.private
-[user]
-	name = Stephan Zalewski
-	email = stephan@foo-labs.com
 [log]
 	abbrevCommit = true
 [rerere]
